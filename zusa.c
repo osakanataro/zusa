@@ -1269,51 +1269,62 @@ main(int argc, char **argv)
 		rndm=rand()%((2^15)-1);
 		ch=rndm;
 		
-		printf("**** %d ****\n",ch);
+//		printf("**** %d ****\n",ch);
 	}
 
 	switch (ch) {
 	case '1':
+	case 1:
 		q = gikoanim1;
 		n = ANIM1_PATS;
 		break;
 	case '2':
+	case 2:
 		q = gikoanim2;
 		n = ANIM2_PATS;
 		break;
 	case '3':
+	case 3:
 		q = rantata_anim;
 		n = ANIM3_PATS;
 		break;
 	case '4':
+	case 4:
 		q = tipoff_anim;
 		n = ANIM4_PATS;
 		break;
 	case '5':
+	case 5:
 		q = okottazou_anim;
 		n = ANIM5_PATS;
 		break;
 	case '6':
+	case 6:
 		q = kusoproc_anim;
 		n = ANIM6_PATS;
 		break;
 	case '7':
+	case 7:
 		q = mona8kick_anim;
 		n = ANIM7_PATS;
 		break;
 	case '8':
+	case 8:
 		q = kossori_anim;
 		n = ANIM8_PATS;
 		break;
 	case '9':
+	case 9:
 		q = unkown1_anim;
 		n = ANIM9_PATS;
 		break;
 	case 'a':
+	case 10:
 		q = pengiso_anim;
 		n = ANIM10_PATS;
 		break;
 	case 'b':
+	case 11:
 		q = userhyoka_anim;
 		n = ANIM11_PATS;
 		break;
@@ -1358,7 +1369,7 @@ main(int argc, char **argv)
 				if (q->message_f)
 					drawmes(bx, by, &(q->str));
 
-				usleep(q->msec/3000);
+				usleep(q->msec-3000);
 				refresh();
 				(q->count)--;
 			}
